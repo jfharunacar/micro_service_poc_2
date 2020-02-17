@@ -1,0 +1,63 @@
+dn: dc=jforce,dc=com
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: jforce
+
+# Organizational Units
+dn: ou=groups,dc=jforce,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=jforce,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+# Create People
+dn: uid=john,ou=people,dc=jforce,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: John Doe
+sn: John
+uid: john
+password: $2a$10$slYQmyNdGzTn7ZLBXBChFOC9f6kFjAqPhccnP6DxlWXx2lPk1C3G6
+
+dn: uid=jihn,ou=people,dc=jforce,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Jihn Die
+sn: Jihn
+uid: jihn
+password: secret
+
+dn: uid=jahn,ou=people,dc=jforce,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Jahn Dae
+sn: Jahn
+uid: jahn
+password: secret
+
+# Create Groups
+dn: cn=developers,ou=groups,dc=jforce,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: developers
+ou: developer
+uniqueMember: uid=john,ou=people,dc=jforce,dc=com
+uniqueMember: uid=jihn,ou=people,dc=jforce,dc=com
+
+dn: cn=managers,ou=groups,dc=jforce,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: managers
+ou: manager
+uniqueMember: uid=jahn,ou=people,dc=jforce,dc=com

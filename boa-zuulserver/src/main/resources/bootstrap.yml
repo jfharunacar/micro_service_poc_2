@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: default
+  application:
+    name: boa-gateway-service
+  cloud:
+    config:
+      uri: http://localhost:8181
+    

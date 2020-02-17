@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: boa-register-service
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: harun
+Implementation-Vendor-Id: tr.com.jforce
+Build-Jdk: 1.8.0_241
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/boa-register-service
+Created-By: Maven Integration for Eclipse
+
